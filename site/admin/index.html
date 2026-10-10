@@ -1,0 +1,712 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<link rel="icon" href="data:,">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-NFNkzC5skKacHStQRh2OWA7JQTjkfYqSaY+4yRdNUW8=' 'sha256-aBEdFNHNHuDjJDHVnbhfejKD5HVNONphBjGV3LsESBE=' https://cdn.jsdelivr.net; style-src 'sha256-hPRRWqxpqQcXaWtm/MB1uZOx049GOSVhNKKwJDbGM+g='; connect-src https://vtkwxlonbebpboxxjpmg.supabase.co wss://vtkwxlonbebpboxxjpmg.supabase.co; img-src data:; font-src 'self'; object-src 'none'; base-uri 'none'; form-action 'self'">
+<title>Administration ACLO</title>
+<style>:root{font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#142238;background:#f4f7fb;font-synthesis:none;text-rendering:optimizeLegibility;font-smooth:always}*{box-sizing:border-box}body{margin:0;min-height:100vh;background:radial-gradient(circle at 5% 0%,#e8f2ff 0,transparent 34rem),#f4f7fb}.page{max-width:1180px;margin:0 auto;padding:24px clamp(16px,4vw,48px) 28px}.topbar{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:10px 0 24px;border-bottom:1px solid #dce5f1}.brand{display:flex;gap:11px;align-items:center;color:inherit;text-decoration:none;font-weight:800;letter-spacing:.02em}.brand small{display:block;color:#65758b;font-size:11px;letter-spacing:.12em;text-transform:uppercase}.brand-mark{display:grid;place-items:center;width:40px;height:40px;background:#0c3e7b;color:white;border-radius:13px;font-size:20px}.session-tools{display:flex;align-items:center;gap:14px}.signed-in-as{font-size:13px;color:#516176;max-width:240px;overflow-wrap:anywhere}.login-card{max-width:440px;margin:9vh auto;padding:clamp(24px,5vw,42px);background:white;border:1px solid #dce5f1;border-radius:22px;box-shadow:0 20px 60px #183e6f14}.eyebrow{font-size:11px;text-transform:uppercase;letter-spacing:.14em;font-weight:800;color:#1771ca}h1,h2,p{margin-top:0}h1{font-size:clamp(28px,4vw,38px);letter-spacing:-.04em;margin-bottom:10px}h2{font-size:21px;letter-spacing:-.025em;margin-bottom:6px}.muted{color:#64748b;line-height:1.55}.login-card form,.record-form{display:grid;gap:11px}label{font-size:13px;font-weight:700;color:#384b62}input,textarea{font:inherit;width:100%;border:1px solid #cbd7e5;border-radius:10px;padding:12px 13px;color:#172b45;background:#fff;outline:none}input:focus,textarea:focus{border-color:#3180d3;box-shadow:0 0 0 3px #3180d31b}textarea{min-height:84px;resize:vertical}.button{appearance:none;border:1px solid transparent;border-radius:10px;padding:10px 14px;font:inherit;font-weight:750;cursor:pointer}.button:disabled{opacity:.55;cursor:wait}.button-primary{background:#0c3e7b;color:#fff}.button-primary:hover{background:#082f5d}.button-quiet{background:#fff;color:#254364;border-color:#d4dfec}.button-quiet:hover{background:#f5f9ff}.login-card .button{margin-top:8px;min-height:46px}.message{min-height:22px;font-size:13px;color:#a03535}.message:empty{min-height:0}.message.ok{color:#267448}.security-note{font-size:12px;color:#77869a;line-height:1.5;border-top:1px solid #edf1f6;padding-top:14px;margin:15px 0 0}.welcome{padding:32px 0 22px}.welcome p{margin-bottom:0}.tabs{display:flex;gap:8px;border-bottom:1px solid #dce5f1;margin-bottom:18px}.tab{background:transparent;border:0;padding:13px 15px;color:#64748b;font:inherit;font-weight:750;cursor:pointer;border-bottom:3px solid transparent}.tab.is-active{color:#0c3e7b;border-color:#0c3e7b}.panel{background:#fff;border:1px solid #dce5f1;border-radius:18px;box-shadow:0 10px 32px #183e6f0b;padding:clamp(16px,2.4vw,28px)}.content-layout{display:grid;grid-template-columns:190px minmax(0,1fr);gap:24px}.section-list{display:flex;flex-direction:column;gap:5px;border-right:1px solid #edf1f6;padding-right:18px}.section-button{border:0;border-radius:9px;background:transparent;text-align:left;padding:11px 12px;color:#53657b;font:inherit;font-weight:700;cursor:pointer}.section-button:hover,.section-button.is-selected{background:#edf5ff;color:#0c3e7b}.work-area{min-width:0}.work-heading{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:18px}.work-heading p{margin:0}.record-form{grid-template-columns:repeat(2,minmax(0,1fr));background:#f7faff;border:1px solid #e2eaf4;border-radius:14px;padding:16px;margin-bottom:14px}.record-form .field{display:grid;gap:6px}.record-form .field.full{grid-column:1/-1}.form-actions{grid-column:1/-1;display:flex;gap:8px;justify-content:flex-end}.records{display:grid;gap:10px}.record-card{border:1px solid #e2eaf4;border-radius:13px;padding:14px;display:flex;align-items:flex-start;justify-content:space-between;gap:16px}.record-info{min-width:0}.record-title{font-weight:800;color:#223953;margin-bottom:5px;overflow-wrap:anywhere}.record-detail{font-size:13px;color:#66768b;line-height:1.5;overflow-wrap:anywhere}.record-actions{display:flex;gap:7px;flex-shrink:0}.small-button{border:1px solid #d4dfec;background:white;color:#254364;border-radius:8px;padding:7px 10px;font:inherit;font-size:12px;font-weight:700;cursor:pointer}.small-button.delete{color:#a03535;border-color:#f1d5d5}.audit-record{display:grid;grid-template-columns:minmax(125px,180px) minmax(110px,150px) minmax(120px,1fr) minmax(100px,180px);gap:12px;align-items:start;padding:13px 0;border-bottom:1px solid #edf1f6;font-size:13px}.audit-record:last-child{border-bottom:0}.audit-meta{color:#64748b;overflow-wrap:anywhere}.audit-action{display:inline-block;border-radius:999px;padding:4px 8px;font-weight:800;font-size:11px;background:#edf5ff;color:#0c3e7b}.audit-action.DELETE{background:#fff1f0;color:#a03535}.audit-action.INSERT{background:#ebf8f0;color:#247246}.audit-action.UPDATE{background:#fff7e7;color:#8a5a07}.field-tags{display:flex;gap:5px;flex-wrap:wrap}.field-tag{border-radius:6px;padding:3px 6px;background:#f1f4f8;color:#62738a;font-size:11px}.load-more{display:block;margin:18px auto 0}.empty{padding:28px;text-align:center;border:1px dashed #cbd7e5;border-radius:12px;color:#738299;font-size:14px}footer{display:flex;justify-content:space-between;gap:12px;color:#8795a8;font-size:12px;padding:24px 2px}footer a{color:#536e8d;text-decoration:none}@media(max-width:720px){.content-layout{grid-template-columns:1fr;gap:16px}.section-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));border-right:0;border-bottom:1px solid #edf1f6;padding:0 0 14px}.section-button{font-size:13px}.audit-record{grid-template-columns:1fr 1fr}.record-card{display:block}.record-actions{margin-top:12px}.record-form{grid-template-columns:1fr}.record-form .field.full{grid-column:auto}.signed-in-as{display:none}.work-heading{align-items:flex-start}.panel{padding:15px}}[hidden]{display:none!important}</style>
+<script>document.addEventListener("submit", (event) => {
+  if (event.target instanceof HTMLFormElement && event.target.id === "login-form") event.preventDefault();
+}, true);</script>
+<script type="module">const SUPABASE_URL = "https://vtkwxlonbebpboxxjpmg.supabase.co";
+const SUPABASE_PUBLISHABLE_KEY = "sb_publishable_z8k7aiuY17omyGLg0U8i3A_cBwPCxYj";
+let supabase;
+let adminInitPromise;
+async function initializeAdmin() {
+  if (adminInitPromise) return adminInitPromise;
+  adminInitPromise = (async () => {
+    const { createClient } = await import("https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.117.2/+esm");
+    supabase = createClient(SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY, {
+      auth: {
+        storage: window.sessionStorage,
+        autoRefreshToken: true,
+        persistSession: true,
+        detectSessionInUrl: false,
+      },
+    });
+    await restoreSession();
+  })();
+  try {
+    await adminInitPromise;
+  } catch {
+    adminInitPromise = null;
+    setMessage(loginMessage, "Impossible de charger le service de connexion. Vérifie ta connexion Internet.");
+  }
+}
+
+const definitions = {
+  FA: {
+    title: "Actualités",
+    table: "FA",
+    heading: (row) => row.titre || "Sans titre",
+    fields: [
+      { key: "titre", label: "Titre", type: "text", required: true, full: true, max: 200 },
+      { key: "autoremove", label: "Suppression automatique (facultatif)", type: "datetime-local" },
+    ],
+  },
+  evenements: {
+    title: "Événements",
+    table: "evenements",
+    heading: (row) => row.titre || "Sans titre",
+    fields: [
+      { key: "titre", label: "Titre", type: "text", required: true, max: 200 },
+      { key: "description", label: "Description", type: "textarea", full: true, max: 2000 },
+      { key: "categorie", label: "Catégorie", type: "select", required: true, options: ["Compétition", "Activité", "Événement"] },
+      { key: "date_debut", label: "Date et heure de début", type: "datetime-local", required: true },
+      { key: "date_fin", label: "Date et heure de fin", type: "datetime-local", required: true },
+    ],
+  },
+  elite: {
+    title: "Élite",
+    table: "elite",
+    heading: (row) => [row.prenom, row.nom].filter(Boolean).join(" ") || "Sans nom",
+    fields: [
+      { key: "prenom", label: "Prénom", type: "text", required: true, max: 100 },
+      { key: "nom", label: "Nom", type: "text", required: true, max: 100 },
+      { key: "grade", label: "Niveau / grade", type: "text", required: true, max: 80 },
+      { key: "performance", label: "Performance (facultatif)", type: "textarea", full: true, max: 500 },
+    ],
+  },
+  coach_absences: {
+    title: "Absences coachs",
+    table: "coach_absences",
+    heading: (row) => row.coach || "Coach",
+    fields: [
+      { key: "coach", label: "Coach", type: "text", required: true, max: 120 },
+      { key: "absent_jusque", label: "Absent jusqu’au", type: "date", required: true },
+      { key: "adaptation", label: "Adaptation prévue (facultatif)", type: "textarea", full: true, max: 1000 },
+    ],
+  },
+  club_personnel: {
+    title: "Personnel",
+    table: "club_personnel",
+    heading: (row) => row.nom || "Sans nom",
+    fields: [
+      { key: "nom", label: "Nom", type: "text", required: true, max: 160 },
+      { key: "role", label: "Fonction", type: "text", required: true, max: 180 },
+      { key: "ordre", label: "Ordre d’affichage", type: "number", required: true, min: 0, max: 10000 },
+    ],
+  },
+  entrainements: {
+    title: "Entraînements",
+    table: "entrainements",
+    heading: (row) => row.groupe || "Groupe",
+    fields: [
+      { key: "groupe", label: "Groupe", type: "text", required: true, max: 120 },
+      { key: "horaires", label: "Jours et horaires", type: "text", required: true, max: 240 },
+      { key: "entraineur", label: "Entraîneur", type: "text", required: true, max: 160 },
+      { key: "lieu", label: "Lieu (facultatif)", type: "text", max: 200 },
+      { key: "details", label: "Informations complémentaires", type: "textarea", full: true, max: 1000 },
+      { key: "ordre", label: "Ordre d’affichage", type: "number", required: true, min: 0, max: 10000 },
+    ],
+  },
+  equipements: {
+    title: "Équipements",
+    table: "equipements",
+    heading: (row) => row.nom || "Équipement",
+    fields: [
+      { key: "nom", label: "Nom", type: "text", required: true, max: 160 },
+      { key: "description", label: "Description", type: "textarea", full: true, max: 1000 },
+      { key: "tailles", label: "Tailles disponibles", type: "text", max: 200 },
+      { key: "disponibilite", label: "Disponibilité", type: "text", required: true, max: 160 },
+      { key: "ordre", label: "Ordre d’affichage", type: "number", required: true, min: 0, max: 10000 },
+    ],
+  },
+};
+
+const loginView = document.querySelector("#login-view");
+const dashboardView = document.querySelector("#dashboard-view");
+const loginForm = document.querySelector("#login-form");
+const loginMessage = document.querySelector("#login-message");
+const loginSubmit = document.querySelector("#login-submit");
+const sessionTools = document.querySelector("#session-tools");
+const signedInAs = document.querySelector("#signed-in-as");
+const contentPanel = document.querySelector("#content-panel");
+const auditPanel = document.querySelector("#audit-panel");
+const pushPanel = document.querySelector("#push-panel");
+const recordForm = document.querySelector("#record-form");
+const contentMessage = document.querySelector("#content-message");
+const auditMessage = document.querySelector("#audit-message");
+const records = document.querySelector("#records");
+const auditRecords = document.querySelector("#audit-records");
+const loadMoreAuditButton = document.querySelector("#load-more-audit");
+
+let activeTable = "FA";
+let editingId = null;
+let auditOffset = 0;
+const auditPageSize = 100;
+
+function setMessage(element, message = "", success = false) {
+  element.textContent = message;
+  element.classList.toggle("ok", Boolean(message) && success);
+}
+
+function button(label, className, onClick) {
+  const element = document.createElement("button");
+  element.type = "button";
+  element.className = className;
+  element.textContent = label;
+  element.addEventListener("click", onClick);
+  return element;
+}
+
+function localDateTime(value) {
+  if (!value) return "";
+  const date = new Date(value);
+  if (Number.isNaN(date.valueOf())) return "";
+  const offset = date.getTimezoneOffset() * 60000;
+  return new Date(date.valueOf() - offset).toISOString().slice(0, 16);
+}
+
+function displayValue(field, value) {
+  if (value === null || value === undefined || value === "") return "";
+  if (field.type === "datetime-local") {
+    const date = new Date(value);
+    return Number.isNaN(date.valueOf()) ? String(value) : date.toLocaleString("fr-BE");
+  }
+  return String(value);
+}
+
+async function checkAdmin(user) {
+  const { data, error } = await supabase
+    .from("admin_users")
+    .select("user_id")
+    .eq("user_id", user.id)
+    .maybeSingle();
+
+  if (error || !data) {
+    await supabase.auth.signOut();
+    showLogin("Accès refusé. Ce compte n’est pas autorisé.");
+    return false;
+  }
+  return true;
+}
+
+function showLogin(message = "") {
+  loginView.hidden = false;
+  dashboardView.hidden = true;
+  loginForm.hidden = false;
+  sessionTools.hidden = true;
+  signedInAs.textContent = "";
+  recordForm.hidden = true;
+  setMessage(loginMessage, message);
+}
+
+async function continueAdminLogin(user, logLogin = false) {
+  if (!(await checkAdmin(user))) return;
+  if (logLogin) {
+    const { error } = await supabase.rpc("log_admin_session", { p_action: "LOGIN" });
+    if (error) throw new Error("Impossible d’enregistrer la connexion admin.");
+  }
+  await showDashboard(user);
+}
+
+async function showDashboard(user) {
+  if (!(await checkAdmin(user))) return;
+  loginView.hidden = true;
+  dashboardView.hidden = false;
+  sessionTools.hidden = false;
+  signedInAs.textContent = user.email || "Administrateur";
+  setMessage(loginMessage);
+  await loadRows();
+}
+
+loginForm.addEventListener("submit", async (event) => {
+  event.preventDefault();
+  setMessage(loginMessage);
+  loginSubmit.disabled = true;
+  loginSubmit.textContent = "Connexion…";
+
+  const form = new FormData(loginForm);
+  const email = String(form.get("email") || "").trim().toLowerCase();
+  const password = String(form.get("password") || "");
+
+  try {
+    const { data, error } = await supabase.auth.signInWithPassword({ email, password });
+    if (error || !data.user) {
+      setMessage(loginMessage, "Connexion impossible. Vérifie l’adresse et le mot de passe.");
+      return;
+    }
+    await continueAdminLogin(data.user, true);
+  } catch {
+    setMessage(loginMessage, "Connexion impossible pour le moment.");
+  } finally {
+    loginSubmit.disabled = false;
+    loginSubmit.textContent = "Se connecter";
+    document.querySelector("#password").value = "";
+  }
+});
+
+document.querySelector("#sign-out").addEventListener("click", async (event) => {
+  const signOutButton = event.currentTarget;
+  setMessage(contentMessage);
+  signOutButton.disabled = true;
+  try {
+    const { error } = await supabase.rpc("log_admin_session", { p_action: "LOGOUT" });
+    if (error) throw error;
+    const { error: signOutError } = await supabase.auth.signOut();
+    if (signOutError) throw signOutError;
+    showLogin("Tu es déconnecté.");
+  } catch {
+    setMessage(contentMessage, "La déconnexion n’a pas pu être journalisée. Réessaie.");
+  } finally {
+    signOutButton.disabled = false;
+  }
+});
+
+document.querySelector("#content-tab").addEventListener("click", () => {
+  contentPanel.hidden = false;
+  auditPanel.hidden = true;
+  pushPanel.hidden = true;
+  document.querySelector("#content-tab").classList.add("is-active");
+  document.querySelector("#audit-tab").classList.remove("is-active");
+  document.querySelector("#push-tab").classList.remove("is-active");
+});
+
+document.querySelector("#audit-tab").addEventListener("click", async () => {
+  contentPanel.hidden = true;
+  auditPanel.hidden = false;
+  pushPanel.hidden = true;
+  document.querySelector("#content-tab").classList.remove("is-active");
+  document.querySelector("#audit-tab").classList.add("is-active");
+  document.querySelector("#push-tab").classList.remove("is-active");
+  auditOffset = 0;
+  await loadAudit(true);
+});
+
+document.querySelector("#push-tab").addEventListener("click", () => {
+  contentPanel.hidden = true;
+  auditPanel.hidden = true;
+  pushPanel.hidden = false;
+  document.querySelector("#content-tab").classList.remove("is-active");
+  document.querySelector("#audit-tab").classList.remove("is-active");
+  document.querySelector("#push-tab").classList.add("is-active");
+});
+
+document.querySelectorAll(".section-button").forEach((element) => {
+  element.addEventListener("click", async () => {
+    activeTable = element.dataset.table;
+    document.querySelectorAll(".section-button").forEach((item) => item.classList.toggle("is-selected", item === element));
+    cancelEdit();
+    await loadRows();
+  });
+});
+
+document.querySelector("#new-record").addEventListener("click", () => {
+  editingId = null;
+  buildForm({});
+  recordForm.hidden = false;
+  document.querySelector("#table-title").scrollIntoView({ behavior: "smooth", block: "start" });
+});
+
+document.querySelector("#refresh-audit").addEventListener("click", () => {
+  auditOffset = 0;
+  loadAudit(true);
+});
+
+loadMoreAuditButton.addEventListener("click", async () => {
+  auditOffset += auditPageSize;
+  await loadAudit(false);
+});
+
+document.querySelector("#push-form").addEventListener("submit", async (event) => {
+  event.preventDefault();
+  const form = event.currentTarget;
+  const category = form.elements.namedItem("category").value;
+  const title = form.elements.namedItem("title").value.trim();
+  const body = form.elements.namedItem("body").value.trim();
+  const submit = document.querySelector("#push-submit");
+  const message = document.querySelector("#push-message");
+
+  if (!title || !body) {
+    setMessage(message, "Ajoute un titre et un message.");
+    return;
+  }
+  if (!window.confirm("Envoyer cette notification uniquement aux appareils inscrits à la catégorie choisie ?")) return;
+
+  submit.disabled = true;
+  setMessage(message);
+  try {
+    const { data, error } = await supabase.functions.invoke("admin-push", { body: { category, title, body } });
+    if (error) throw error;
+    if (!data?.success) throw new Error("Push request failed");
+
+    if (data.recipients === 0) {
+      setMessage(message, "Aucun appareil n’est actuellement inscrit.", true);
+    } else {
+      setMessage(message, "Expo a accepté " + data.accepted + " notification(s) sur " + data.recipients + " appareil(s). Cela ne garantit pas leur réception sur chaque appareil.", true);
+    }
+    form.reset();
+  } catch (error) {
+    const status = error?.context?.status;
+    setMessage(message, status === 429
+      ? "Limite d’envoi atteinte. Réessaie plus tard."
+      : "Envoi impossible. Vérifie la connexion et les droits du compte admin.");
+  } finally {
+    submit.disabled = false;
+  }
+});
+
+function buildForm(row) {
+  const definition = definitions[activeTable];
+  recordForm.replaceChildren();
+  definition.fields.forEach((field) => {
+    const wrapper = document.createElement("div");
+    wrapper.className = "field" + (field.full ? " full" : "");
+    const label = document.createElement("label");
+    const id = "field-" + field.key;
+    label.htmlFor = id;
+    label.textContent = field.label;
+    let input;
+
+    if (field.type === "textarea") {
+      input = document.createElement("textarea");
+    } else if (field.type === "select") {
+      input = document.createElement("select");
+      for (const optionValue of field.options || []) {
+        const option = document.createElement("option");
+        option.value = optionValue;
+        option.textContent = optionValue;
+        input.append(option);
+      }
+    } else {
+      input = document.createElement("input");
+      input.type = field.type;
+    }
+    input.id = id;
+    input.name = field.key;
+    input.required = Boolean(field.required);
+    if (field.max) input.maxLength = field.max;
+    if (field.min !== undefined) input.min = String(field.min);
+    if (field.max !== undefined && field.type === "number") input.max = String(field.max);
+    if (field.type === "number") input.step = "1";
+
+    let value = row[field.key] ?? "";
+    if (field.type === "datetime-local") value = localDateTime(value);
+    input.value = String(value);
+
+    wrapper.append(label, input);
+    recordForm.append(wrapper);
+  });
+
+  const actions = document.createElement("div");
+  actions.className = "form-actions";
+  actions.append(
+    button("Annuler", "button button-quiet", cancelEdit),
+    button(editingId ? "Enregistrer" : "Ajouter", "button button-primary", () => recordForm.requestSubmit()),
+  );
+  recordForm.append(actions);
+  recordForm.hidden = false;
+  recordForm.onsubmit = saveRecord;
+}
+
+async function saveRecord(event) {
+  event.preventDefault();
+  setMessage(contentMessage);
+  const definition = definitions[activeTable];
+  const payload = {};
+
+  for (const field of definition.fields) {
+    const input = recordForm.elements.namedItem(field.key);
+    let value = String(input.value).trim();
+
+    if (field.type === "datetime-local") {
+      value = value ? new Date(value).toISOString() : null;
+    } else if (field.type === "number") {
+      value = value === "" ? null : Number(value);
+    } else if (value === "") {
+      value = null;
+    }
+    payload[field.key] = value;
+  }
+
+  if (activeTable === "evenements" && new Date(payload.date_fin) <= new Date(payload.date_debut)) {
+    setMessage(contentMessage, "La fin de l’événement doit être après son début.");
+    return;
+  }
+
+  const submitButton = recordForm.querySelector(".button-primary");
+  submitButton.disabled = true;
+  try {
+    const query = supabase.from(definition.table);
+    const result = editingId
+      ? await query.update(payload).eq("id", editingId)
+      : await query.insert(payload);
+    if (result.error) throw result.error;
+
+    setMessage(contentMessage, editingId ? "Modification enregistrée." : "Élément ajouté.", true);
+    cancelEdit();
+    await loadRows();
+  } catch {
+    setMessage(contentMessage, "Enregistrement refusé. Vérifie les champs et tes droits d’accès.");
+  } finally {
+    if (submitButton) submitButton.disabled = false;
+  }
+}
+
+function cancelEdit() {
+  editingId = null;
+  recordForm.replaceChildren();
+  recordForm.hidden = true;
+}
+
+async function editRecord(id) {
+  const definition = definitions[activeTable];
+  const { data, error } = await supabase.from(definition.table).select("*").eq("id", id).single();
+  if (error || !data) {
+    setMessage(contentMessage, "Impossible de charger cet élément.");
+    return;
+  }
+  editingId = id;
+  buildForm(data);
+  recordForm.scrollIntoView({ behavior: "smooth", block: "center" });
+}
+
+async function deleteRecord(id) {
+  const definition = definitions[activeTable];
+  if (!window.confirm("Supprimer cet élément ? Cette action sera conservée dans l’historique.")) return;
+  setMessage(contentMessage);
+  const { error } = await supabase.from(definition.table).delete().eq("id", id);
+  if (error) {
+    setMessage(contentMessage, "Suppression refusée. Vérifie tes droits d’accès.");
+    return;
+  }
+  setMessage(contentMessage, "Élément supprimé.", true);
+  await loadRows();
+}
+
+async function loadRows() {
+  const definition = definitions[activeTable];
+  document.querySelector("#table-title").textContent = definition.title;
+  document.querySelector("#table-help").textContent = "Ajouter, modifier ou supprimer un élément. Chaque changement réussi est journalisé.";
+  records.replaceChildren();
+  const { data, error } = await supabase.from(definition.table).select("*").order("id", { ascending: false }).limit(500);
+
+  if (error) {
+    setMessage(contentMessage, "Impossible de charger les données.");
+    records.append(makeEmpty("Accès refusé ou erreur de chargement."));
+    return;
+  }
+
+  setMessage(contentMessage);
+  if (!data.length) {
+    records.append(makeEmpty("Aucun élément pour le moment."));
+    return;
+  }
+
+  data.forEach((row) => {
+    const card = document.createElement("article");
+    card.className = "record-card";
+    const info = document.createElement("div");
+    info.className = "record-info";
+    const title = document.createElement("div");
+    title.className = "record-title";
+    title.textContent = definition.heading(row);
+    const details = document.createElement("div");
+    details.className = "record-detail";
+
+    const summaries = definition.fields
+      .filter((field) => row[field.key] !== null && row[field.key] !== undefined && row[field.key] !== "")
+      .map((field) => field.label + " : " + displayValue(field, row[field.key]));
+    details.textContent = "ID " + row.id + " · " + summaries.join(" · ");
+    info.append(title, details);
+
+    const actions = document.createElement("div");
+    actions.className = "record-actions";
+    actions.append(
+      button("Modifier", "small-button", () => editRecord(row.id)),
+      button("Supprimer", "small-button delete", () => deleteRecord(row.id)),
+    );
+    card.append(info, actions);
+    records.append(card);
+  });
+}
+
+async function loadAudit(reset) {
+  if (reset) auditRecords.replaceChildren();
+  setMessage(auditMessage);
+  const { data, error } = await supabase
+    .from("admin_audit_log")
+    .select("created_at,actor_email,action,entity,entity_id,changed_fields")
+    .order("created_at", { ascending: false })
+    .range(auditOffset, auditOffset + auditPageSize - 1);
+
+  if (error) {
+    setMessage(auditMessage, "Impossible de charger l’historique.");
+    loadMoreAuditButton.hidden = true;
+    return;
+  }
+
+  data.forEach((entry) => {
+    const row = document.createElement("article");
+    row.className = "audit-record";
+
+    const time = document.createElement("time");
+    time.className = "audit-meta";
+    time.dateTime = entry.created_at;
+    time.textContent = new Date(entry.created_at).toLocaleString("fr-BE");
+
+    const actor = document.createElement("div");
+    actor.className = "audit-meta";
+    actor.textContent = entry.actor_email || "Compte autorisé";
+
+    const actionCell = document.createElement("div");
+    const badge = document.createElement("span");
+    badge.className = "audit-action " + entry.action;
+    badge.textContent = actionLabel(entry.action);
+    const target = document.createElement("div");
+    target.className = "audit-meta";
+    target.textContent = entry.entity + (entry.entity_id ? " · ID " + entry.entity_id : "");
+    actionCell.append(badge, target);
+
+    const fields = document.createElement("div");
+    fields.className = "field-tags";
+    (entry.changed_fields || []).forEach((field) => {
+      const tag = document.createElement("span");
+      tag.className = "field-tag";
+      tag.textContent = field;
+      fields.append(tag);
+    });
+    row.append(time, actor, actionCell, fields);
+    auditRecords.append(row);
+  });
+
+  if (reset && data.length === 0) auditRecords.append(makeEmpty("Aucune action enregistrée."));
+  loadMoreAuditButton.hidden = data.length < auditPageSize;
+}
+
+function actionLabel(action) {
+  return ({ INSERT: "Ajout", UPDATE: "Modification", DELETE: "Suppression", LOGIN: "Connexion", LOGOUT: "Déconnexion", PUSH: "Notification push" })[action] || action;
+}
+
+function makeEmpty(text) {
+  const element = document.createElement("div");
+  element.className = "empty";
+  element.textContent = text;
+  return element;
+}
+
+async function restoreSession() {
+  const { data, error } = await supabase.auth.getSession();
+  if (error || !data.session) return showLogin();
+  try {
+    await continueAdminLogin(data.session.user);
+  } catch {
+    await supabase.auth.signOut();
+    showLogin("Vérification admin indisponible. Réessaie.");
+  }
+}
+
+void initializeAdmin();</script>
+</head>
+<body>
+<main class="page">
+    <header class="topbar">
+      <div class="brand" aria-label="Administration ACLO">
+        <span class="brand-mark">A</span><span>ACLO <small>Administration</small></span>
+      </div>
+      <div id="session-tools" class="session-tools" hidden>
+        <span id="signed-in-as" class="signed-in-as"></span>
+        <button id="sign-out" class="button button-quiet" type="button">Déconnexion</button>
+      </div>
+    </header>
+
+    <section id="login-view" class="login-card" aria-labelledby="login-title">
+      <div class="eyebrow">Espace réservé</div>
+      <h1 id="login-title">Connexion admin</h1>
+      <p class="muted">Connecte-toi avec l’adresse e-mail et le mot de passe d’un compte autorisé par le club.</p>
+      <form id="login-form" method="post" autocomplete="on">
+        <label for="email">Adresse e-mail</label>
+        <input id="email" name="email" type="email" autocomplete="username" inputmode="email" required maxlength="254">
+        <label for="password">Mot de passe</label>
+        <input id="password" name="password" type="password" autocomplete="current-password" required maxlength="256">
+        <button id="login-submit" class="button button-primary" type="submit">Se connecter</button>
+      </form>
+      <p id="login-message" class="message" role="status" aria-live="polite"></p>
+      <p class="security-note">Aucun mot de passe n’est enregistré par cette page. Il est vérifié par Supabase Auth.</p>
+    </section>
+
+    <section id="dashboard-view" hidden>
+      <div class="welcome">
+        <div>
+          <div class="eyebrow">Gestion du club</div>
+          <h1>Tableau de bord</h1>
+          <p class="muted">Les changements de contenu sont consignés automatiquement dans l’historique privé.</p>
+        </div>
+      </div>
+      <nav class="tabs" aria-label="Sections du tableau de bord">
+        <button id="content-tab" class="tab is-active" type="button">Contenus</button>
+        <button id="audit-tab" class="tab" type="button">Historique des actions</button>
+        <button id="push-tab" class="tab" type="button">Notifications push</button>
+      </nav>
+      <section id="content-panel" class="panel">
+        <div class="content-layout">
+          <aside class="section-list" aria-label="Types de contenu">
+            <button class="section-button is-selected" data-table="FA" type="button">Actualités</button>
+            <button class="section-button" data-table="evenements" type="button">Événements</button>
+            <button class="section-button" data-table="elite" type="button">Élite</button>
+            <button class="section-button" data-table="coach_absences" type="button">Absences coachs</button>
+            <button class="section-button" data-table="club_personnel" type="button">Organigramme</button>
+            <button class="section-button" data-table="entrainements" type="button">Entraînements</button>
+            <button class="section-button" data-table="equipements" type="button">Équipements</button>
+          </aside>
+          <div class="work-area">
+            <div class="work-heading">
+              <div><h2 id="table-title">Actualités</h2><p id="table-help" class="muted"></p></div>
+              <button id="new-record" class="button button-primary" type="button">Ajouter</button>
+            </div>
+            <form id="record-form" class="record-form" hidden></form>
+            <p id="content-message" class="message" role="status" aria-live="polite"></p>
+            <div id="records" class="records"></div>
+          </div>
+        </div>
+      </section>
+      <section id="audit-panel" class="panel" hidden>
+        <div class="work-heading">
+          <div><h2>Historique des actions</h2><p class="muted">Conservé pendant 365 jours. Les valeurs des champs ne sont pas copiées dans le journal.</p></div>
+          <button id="refresh-audit" class="button button-quiet" type="button">Actualiser</button>
+        </div>
+        <p id="audit-message" class="message" role="status" aria-live="polite"></p>
+        <div id="audit-records" class="audit-records"></div>
+        <button id="load-more-audit" class="button button-quiet load-more" type="button" hidden>Charger plus</button>
+      </section>
+      <section id="push-panel" class="panel" hidden aria-labelledby="push-title">
+        <div class="work-heading">
+          <div><h2 id="push-title">Envoyer une notification</h2><p class="muted">Le message est envoyé aux appareils qui ont activé les notifications dans l’application.</p></div>
+        </div>
+        <form id="push-form" class="record-form">
+          <div class="field full">
+            <label for="push-category-input">Catégorie de notification</label>
+            <select id="push-category-input" name="category" required>
+              <option value="actualites">Actualités</option>
+              <option value="calendrier">Calendrier</option>
+              <option value="entrainements">Entraînements</option>
+              <option value="absences">Absences des coachs</option>
+              <option value="equipements">Équipements</option>
+              <option value="elite">Athlètes Élites</option>
+              <option value="importantes">Notifications importantes</option>
+            </select>
+            <p class="field-hint">La notification sera envoyée uniquement aux personnes inscrites à cette catégorie.</p>
+          </div>
+          <div class="field full">
+            <label for="push-title-input">Titre</label>
+            <input id="push-title-input" name="title" type="text" maxlength="100" required autocomplete="off">
+          </div>
+          <div class="field full">
+            <label for="push-body-input">Message</label>
+            <textarea id="push-body-input" name="body" maxlength="500" rows="4" required></textarea>
+          </div>
+          <div class="form-actions">
+            <button id="push-submit" class="button button-primary" type="submit">Envoyer à tous les appareils inscrits</button>
+          </div>
+        </form>
+        <p id="push-message" class="message" role="status" aria-live="polite"></p>
+      </section>
+    </section>
+    <footer><span>ACLO · Accès réservé aux comptes autorisés · <a href="https://aclo.dev/confidentialite.html" rel="noopener noreferrer">Politique de confidentialité</a></span></footer>
+  </main>
+</body>
+</html>

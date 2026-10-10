@@ -23,7 +23,7 @@ h1,h2,h3{line-height:1.25;color:var(--blue)}h1{font-size:clamp(1.8rem,4vw,2.4rem
 <li>Site : <strong>https://www.raclo.be/</strong></li>
 <li>Contact actuel pour les demandes relatives aux données : <strong>secretariat.raclo@gmail.com</strong></li>
 </ul>
-<p>Le club recommande de créer une adresse dédiée de type <code>privacy@raclo.be</code> et de remplacer l'adresse ci-dessus dès qu'elle existe.</p>
+
 <h2>2. Objet de l'application</h2>
 <p>ACLO permet notamment de consulter les actualités, événements, absences annoncées des entraîneurs, informations relatives au personnel du club, membres Élite et performances sportives, ainsi que de recevoir des notifications push liées à la vie du club.</p>
 <h2>3. Données traitées</h2>
@@ -38,20 +38,17 @@ h1,h2,h3{line-height:1.25;color:var(--blue)}h1{font-size:clamp(1.8rem,4vw,2.4rem
 <li>nom d'un entraîneur signalé absent et date de fin de l'absence ;</li>
 <li>actualités et événements du club.</li>
 </ul>
-<h3>Données techniques</h3>
+<h3>Données techniques et d’administration</h3>
 <ul>
-<li>token de notification push Expo ;</li>
-<li>plateforme de l'appareil (<code>android</code> ou <code>ios</code>) ;</li>
-<li>date de dernière activité du token push ;</li>
-<li>préférences de notifications associées à l’appareil (actualités, calendrier, entraînements, absences, équipements, athlètes Élites et notifications importantes) ;</li>
+<li>identifiant technique utilisé pour acheminer les notifications, système de l’appareil et préférences de notification ;</li>
 <li>journaux techniques et de sécurité ;</li>
-<li>pour les comptes admin autorisés : adresse e-mail, identifiant de compte, date, type d’action, contenu concerné, identifiant de l’élément et noms des champs modifiés (sans conserver les anciennes/nouvelles valeurs dans le journal), ainsi que la trace d’un envoi push (sans conserver le titre ni le texte du message dans le journal) ;</li>
-<li>adresse IP ou dérivé cryptographique de celle-ci lorsque cela est strictement nécessaire à la limitation des abus.</li>
+<li>informations professionnelles des personnes autorisées à administrer les contenus et historique de leurs opérations ;</li>
+<li>adresse IP ou données techniques associées, lorsque cela est nécessaire à la sécurité et à la prévention des abus.</li>
 </ul>
 <h2>4. Finalités et bases juridiques</h2>
 <p>Les traitements sont réalisés pour les finalités suivantes :</p>
 <table><tbody>
-<tr><th>Finalité</th><th>Données principales</th><th>Base juridique envisagée</th></tr>
+<tr><th>Finalité</th><th>Données principales</th><th>Base juridique</th></tr>
 <tr><td>Informer les membres et le public sur la vie du club</td><td>actualités, événements</td><td>intérêt légitime du club</td></tr>
 <tr><td>Présenter l'organisation du club</td><td>noms et fonctions</td><td>intérêt légitime du club</td></tr>
 <tr><td>Présenter les athlètes Élite et résultats sportifs</td><td>identité, niveau, performances</td><td>intérêt légitime, avec examen renforcé pour les mineurs</td></tr>
@@ -62,7 +59,7 @@ h1,h2,h3{line-height:1.25;color:var(--blue)}h1{font-size:clamp(1.8rem,4vw,2.4rem
 <p>Si une notification est utilisée à des fins de marketing direct ou de promotion distincte du fonctionnement ordinaire du club, le club vérifie séparément la base juridique applicable et recueille le consentement lorsque celui-ci est requis.</p>
 <h2>5. Mineurs</h2>
 <p>Le Royal ACLO accueille des mineurs. Une attention particulière doit donc être portée à leurs données.</p>
-<p>L'application ne doit pas publier :</p>
+<p>L’application ne publie pas les informations personnelles suivantes :</p>
 <ul>
 <li>adresse privée ;</li>
 <li>numéro de téléphone privé d'un mineur ;</li>
@@ -76,7 +73,7 @@ h1,h2,h3{line-height:1.25;color:var(--blue)}h1{font-size:clamp(1.8rem,4vw,2.4rem
 <h2>6. Notifications push</h2>
 <p>L'application peut demander l'autorisation d'envoyer des notifications. Cette autorisation peut être refusée ou retirée à tout moment dans les réglages Android ou iOS.</p>
 <p>Le refus des notifications n'empêche pas l'accès aux principales informations disponibles dans l'application. Sur un nouvel appareil, toutes les catégories de notification sont activées par défaut. Dans l’onglet « Notifications », chaque personne peut ensuite activer ou désactiver les catégories proposées sur cet appareil, y compris « Notifications importantes ». Une catégorie désactivée n’est pas utilisée pour les envois ciblés de cette catégorie. Les préférences sont enregistrées avec le token de l’appareil et ne sont pas liées à un compte utilisateur de l’application. Leur activation par défaut sert aux notifications fonctionnelles et ne constitue pas un consentement au marketing direct. Si toutes les catégories sont désactivées, le token push de cet appareil est supprimé de la base. Pour les autres demandes relatives aux données, contacte le club à l’adresse indiquée dans cette politique.</p>
-<p>Les tokens push sont utilisés uniquement afin d'acheminer les notifications du club. Des admins autorisés peuvent envoyer un titre et un message aux appareils inscrits. Le contenu est transmis à Expo, puis aux services Google/Apple nécessaires à la livraison. Il n’est pas conservé dans le journal d’audit ; celui-ci conserve uniquement l’action, l’acteur, la date et les champs concernés. Les tokens ne sont pas exposés publiquement. Les notifications importantes restent facultatives ; l’application ne doit pas être considérée comme un canal d’urgence ou de sécurité.</p>
+<p>Les tokens push sont utilisés uniquement afin d'acheminer les notifications du club. Des admins autorisés peuvent envoyer un titre et un message aux appareils inscrits. Le contenu est transmis à Expo, puis aux services Google/Apple nécessaires à la livraison. Les identifiants techniques de notification ne sont pas affichés dans l’application. Les notifications importantes restent facultatives ; l’application ne doit pas être considérée comme un canal d’urgence ou de sécurité.</p>
 <h2>7. Destinataires et sous-traitants</h2>
 <p>Les données peuvent être traitées par les prestataires techniques nécessaires au service, notamment :</p>
 <ul>
@@ -85,10 +82,9 @@ h1,h2,h3{line-height:1.25;color:var(--blue)}h1{font-size:clamp(1.8rem,4vw,2.4rem
 <li><strong>Google / Firebase Cloud Messaging</strong> : acheminement des notifications Android ;</li>
 <li><strong>Apple Push Notification service (APNs)</strong> : acheminement des notifications iOS ;</li>
 <li><strong>GitHub Pages</strong> : hébergement et distribution des pages publiques de confidentialité et d’assistance. GitHub et ses prestataires techniques peuvent traiter l’adresse IP, des informations de requête et des journaux techniques nécessaires à la livraison et à la sécurité ;</li>
-<li><strong>GitHub</strong> : hébergement du code source privé et automatisations de développement ;
 <li><strong>jsDelivr</strong> : distribution du SDK Supabase utilisé par la page d’administration ; le navigateur transmet les métadonnées réseau usuelles (dont l’adresse IP) lors de son chargement.</li>
 </ul>
-<p>Le club doit réexaminer cette liste à chaque ajout d'un SDK ou prestataire.</p>
+
 <h2>8. Hébergement et transferts internationaux</h2>
 <p>La base principale Supabase de l'application est configurée dans la région <strong>eu-west-3 (Paris, France)</strong>. Les pages publiques de confidentialité et d’assistance sont hébergées sur GitHub Pages, avec l’adresse <strong>https://loouisdev.github.io/aclo.doc</strong>. GitHub et ses prestataires traitent les données réseau nécessaires à la transmission et à la sécurité des requêtes web, notamment l’adresse IP et les journaux techniques.</p>
 <p>Certains fournisseurs techniques peuvent néanmoins traiter des données ou métadonnées en dehors de l'Espace économique européen. Lorsque le RGPD l'exige, les transferts doivent reposer sur un mécanisme reconnu, tel qu'une décision d'adéquation ou les clauses contractuelles types de la Commission européenne, accompagné si nécessaire de mesures complémentaires.</p>
@@ -101,26 +97,11 @@ h1,h2,h3{line-height:1.25;color:var(--blue)}h1{font-size:clamp(1.8rem,4vw,2.4rem
 <li>personnel du club : pendant l'exercice de la fonction, avec révision lors des changements ;</li>
 <li>données Élite : révision au minimum à chaque saison ;</li>
 <li>token push : suppression lorsqu’il est invalide, lorsque toutes les catégories sont désactivées dans l’app, ou après <strong>365 jours sans activité</strong> ;</li>
-<li>données de limitation d'abus : courte durée, actuellement <strong>2 jours</strong> ;</li>
+<li>données de limitation d'abus : courte durée, jusqu’à <strong>2 jours</strong> ;</li>
 <li>historique des actions d’administration : <strong>365 jours</strong>, puis suppression automatique.</li>
 </ul>
 <h2>10. Sécurité</h2>
-<p>Le club met notamment en œuvre :</p>
-<ul>
-<li>HTTPS/TLS pour les communications ;</li>
-<li>hébergement européen de la base principale ;</li>
-<li>Row Level Security (RLS) ;</li>
-<li>droits clients limités à la lecture des données publiques ;</li>
-<li>les tables techniques de tokens push et de limitation de fréquence ne sont accessibles qu’aux fonctions serveur ;</li>
-<li>espace d’administration sans formulaire d’inscription, réservé à une liste d’utilisateurs autorisés, avec mots de passe gérés par Supabase Auth. Le réglage Supabase doit désactiver les inscriptions publiques avant publication ;</li>
-<li>journal d’audit limité aux métadonnées d’action et aux noms des champs modifiés, conservé 365 jours ;</li>
-<li>fonctions d’administration protégées par JWT, liste d’autorisation et vérification AAL2 côté serveur ; l’enrôlement TOTP du compte administrateur reste à terminer avant son utilisation en production ;</li>
-<li>séparation entre clés publiques client et secrets serveur ;</li>
-<li>stockage des secrets serveur hors du code client ;</li>
-<li>limitation de fréquence de certaines requêtes ;</li>
-<li>suppression programmée de données devenues inutiles ;</li>
-<li>contrôles automatisés des dépendances et secrets dans GitHub.</li>
-</ul>
+<p>Le club applique des mesures techniques et organisationnelles destinées à protéger les données, notamment la sécurisation des communications, la limitation des accès aux personnes autorisées, la protection des systèmes et la suppression des données selon les durées prévues.</p>
 <h2>11. Droits des personnes</h2>
 <p>Dans les limites prévues par le RGPD, une personne peut notamment demander :</p>
 <ul>
